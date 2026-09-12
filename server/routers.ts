@@ -1,8 +1,8 @@
 import { z } from "zod";
-import { COOKIE_NAME } from "../shared/const";
-import { getSessionCookieOptions } from "./_core/cookies";
-import { systemRouter } from "./_core/systemRouter";
-import { adminProcedure, protectedProcedure, publicProcedure, router } from "./_core/trpc";
+import { COOKIE_NAME } from "../shared/const.js";
+import { getSessionCookieOptions } from "./_core/cookies.js";
+import { systemRouter } from "./_core/systemRouter.js";
+import { adminProcedure, protectedProcedure, publicProcedure, router } from "./_core/trpc.js";
 import {
   createApplication,
   createContactMessage,
@@ -13,7 +13,7 @@ import {
   getEvents,
   getTeamMembers,
   updateApplication,
-} from "./db";
+} from "./db.js";
 
 export const applicationSchema = z.object({
   fullName: z.string().min(2).max(160),

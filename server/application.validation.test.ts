@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { applicationSchema } from "./routers";
+import { applicationSchema } from "./routers.js";
 
 const validApplication = {
   fullName: "Aarav Sharma",
